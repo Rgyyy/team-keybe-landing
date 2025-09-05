@@ -1,0 +1,30 @@
+.info_copyright > span {
+    color: rgb(145, 145, 145)
+}
+
+.footer_bottom img, span {
+    color: rgb(145, 145, 145)
+}
+.web_trust_seal {
+    height: 20px
+}
+footer {
+    padding: 20px;
+    font-size: 0.8rem;
+}
+.info_busi, .info_copyright, .footer_bottom {
+    margin-top: 10px;
+}
+@media (min-width: 768px) {
+    footer{
+        background-color: #e7e7e7;
+        ;
+        font-size: 1rem;
+    }
+    br.over768 {
+        display: none;
+    }
+    
+    
+    
+}
