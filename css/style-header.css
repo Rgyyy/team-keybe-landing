@@ -1,5 +1,5 @@
-main {
-    margin-top: 4rem; /* nav 높이보다 약간 여유 있게 */
+.nav_margin {
+    margin-top: 87px;
 }
 
 /* 네비게이션 바 하단 회색 선 추가 */
@@ -17,6 +17,7 @@ main {
 }
 .navbar-brand .bold-part {
     font-weight: bold;
+    color:black;
 }
 
 /* 네비게이션 아이템들 간격 설정 */
