@@ -1,4 +1,4 @@
-
+/*카드 캐러셀 효과*/
 .perspective-1000 {
       perspective: 1000px;
     }
@@ -13,7 +13,7 @@
       transform: translate(-50%, -50%);
     }
 
-
+/*캐러셀 끝*/
 
 
 .intro_cont {
@@ -100,7 +100,7 @@
 
 /* 8. 섹션 제목 스타일 */
 h2 {
-    color: rgb(47, 99, 255);  /* 원하는 색상 */
+    color: rgb(12, 61, 207);  /* 원하는 색상 */
     font-weight: 700;  /* 600 또는 700 추천 */
     position: relative;
     display: inline-block;

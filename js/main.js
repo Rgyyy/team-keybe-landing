@@ -1,3 +1,4 @@
+ /*캐러셀 */
  document.addEventListener('DOMContentLoaded', () => {
       const cardImages = document.querySelectorAll('.card-image');
       const prevBtn = document.getElementById('prevBtn');
@@ -23,4 +24,4 @@
         const angle = (index - currentIndex) * 72;
         card.style.transform = `translate(-50%, -50%) rotateY(${angle}deg) translateZ(300px) scale(${index === currentIndex ? 1 : 0.8})`;
       });
-    });
+    });/*캐러셀 끝*/
