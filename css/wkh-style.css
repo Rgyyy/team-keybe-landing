@@ -3,17 +3,16 @@
 .perspective-1000 {
       perspective: 1000px;
     }
-    .card-wrapper {
+.card-wrapper {
       transform-style: preserve-3d;
     }
-    .card-image {
+.card-image {
       position: absolute;
       top: 50%;
       left: 50%;
       transform-origin: center center;
       transform: translate(-50%, -50%);
     }
-
 /*캐러셀 끝*/
 
 /* checkcard */
@@ -23,13 +22,11 @@
     color: #111
 }
 
-
 .intro_cont .cont_txt h3 {
     font-size: 40px;
     font-weight: bold;
     line-height: 1.35
 }
-
 
 .intro_cont .cont_txt p {
     margin-top: 24px;
@@ -63,7 +60,6 @@
     vertical-align: text-top
 }
 
-
 .intro_cont.cont_checkcard .cont_txt {
     text-align: center;
     padding-top: 150px
@@ -87,8 +83,8 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 /* checkcard */
-/* 하단 로고*/
 
+/* 하단 로고*/
 .intro_cont.cont_end {
     background-color: #f9f9f9;
     padding-bottom: 230px
@@ -113,7 +109,6 @@
     height: 210px
 }
 
-
 .intro_cont.cont_end .cont_img li strong {
     display: block;
     margin: 45px 0 17px;
@@ -123,7 +118,6 @@
     text-align: center
 }
 
-
 .intro_cont.cont_end .cont_img li p {
     font-size: 14px;
     line-height: 24px;
@@ -131,12 +125,9 @@
     color: #666;
     font-weight: 200
 }
-
-
 /* 하단 로고 끝*/
 
 /* 5. 카드 호버 효과 추가 */
-
 .card {
       display: rgb(158, 102, 102);
       border: 1px solid #ad5050;
@@ -145,8 +136,6 @@
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       transition: transform 0.3s;
     }
-
-
 
 .card {
     transition: transform 0.3s;
@@ -160,17 +149,12 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* 6. 섹션 제목 스타일 */
 h2 {
     color: rgb(12, 61, 207);  
     font-weight: 700;  
     position: relative;
     display: inline-block;
 }
-
-/* 7. 스킬 효과및 호버 */
-
-
 
 .skill-grid {
       display: grid;
@@ -202,6 +186,7 @@ h2 {
       height: 100%;
       transition: width 2s ease;
     }
+/* 7. 스킬 효과및 호버 끝*/
 
 /* 1. 버튼 커스텀 스타일 */
 .btn {
@@ -215,7 +200,7 @@ h2 {
 .btn:hover {
     transform: scale(1.05); 
 }
-
+/* 반응형 */
 @media (min-width: 1024px) {
     .container {
         max-width: 960px;
