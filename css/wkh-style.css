@@ -1,3 +1,4 @@
+
 /*카드 캐러셀 효과*/
 .perspective-1000 {
       perspective: 1000px;
@@ -85,9 +86,56 @@
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
-
-
 /* checkcard */
+/* 하단 로고*/
+
+.intro_cont.cont_end {
+    background-color: #f9f9f9;
+    padding-bottom: 230px
+}
+
+.intro_cont.cont_end .cont_txt {
+    text-align: center;
+    padding-top: 160px
+}
+
+.intro_cont.cont_end .cont_bar {
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    margin: 50px auto 140px
+}
+
+.intro_cont.cont_end .cont_img li {
+    float: left;
+    width: 25%;
+    height: 210px
+}
+
+
+.intro_cont.cont_end .cont_img li strong {
+    display: block;
+    margin: 45px 0 17px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-align: center
+}
+
+
+.intro_cont.cont_end .cont_img li p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #666;
+    font-weight: 200
+}
+
+
+/* 하단 로고 끝*/
+
+/* 5. 카드 호버 효과 추가 */
 
 .card {
       display: rgb(158, 102, 102);
@@ -99,7 +147,7 @@
     }
 
 
-/* 5. 카드 호버 효과 추가 */
+
 .card {
     transition: transform 0.3s;
     border: none;
@@ -112,15 +160,18 @@
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* 8. 섹션 제목 스타일 */
+/* 6. 섹션 제목 스타일 */
 h2 {
-    color: rgb(12, 61, 207);  /* 원하는 색상 */
-    font-weight: 700;  /* 600 또는 700 추천 */
+    color: rgb(12, 61, 207);  
+    font-weight: 700;  
     position: relative;
     display: inline-block;
 }
 
-/* 9. 제목 아래 장식선 추가 */
+/* 7. 스킬 효과및 호버 */
+
+
+
 .skill-grid {
       display: grid;
       gap: 20px;
@@ -152,17 +203,17 @@ h2 {
       transition: width 2s ease;
     }
 
-/* 10. 버튼 커스텀 스타일 */
+/* 1. 버튼 커스텀 스타일 */
 .btn {
-    padding: _12px 30px;  /* 12px 30px 추천 */
-    font-size: 16px;  /* 16px 추천 */
-    border-radius: 25px;  /* 25px 추천 */
+    padding: _12px 30px; 
+    font-size: 16px;  
+    border-radius: 25px;  /
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .btn:hover {
-    transform: scale(1.05);  /* 1.05 추천 */
+    transform: scale(1.05); 
 }
 
 @media (min-width: 1024px) {
