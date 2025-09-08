@@ -15,96 +15,100 @@
  
 <body>
     <!-- 헤더 -->
-    <!-- !!! head에 있는 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"> 추가할것 -->
     <nav class="navbar navbar-expand-md bg-secondary nav_css_line fixed-top">
     <!-- 반응형 md사이즈로 기준 -->
     <!-- (임시)네비게이션바 연회색 bg-secondary, 추후 바디와 식별 가능하면 흰색으로 조정 //css 강제 적용 했음-->
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-        kakao<span class="bold-part">bank</span>
-        </a>
-         
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_list">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- 부트스트랩 navbar-toggler 햄버거버튼 사용 -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                kakao<span class="bold-part">bank</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_list">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- 부트스트랩 navbar-toggler 햄버거버튼 사용 -->
 
-        <div class="collapse navbar-collapse" id="menu_list">
-        <ul class="navbar-nav ms-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#">은행소개</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">카카오뱅크</a></li>
-                    <li><a class="dropdown-item" href="#">윤리경영</a></li>
-                    <li><a class="dropdown-item" href="#">새소식</a></li>
-                    <li><a class="dropdown-item" href="#">인재영입</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#">IR투자정보</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">공시정보</a></li>
-                    <li><a class="dropdown-item" href="#">경영정보</a></li>
-                    <li><a class="dropdown-item" href="#">재무정보</a></li>
-                    <li><a class="dropdown-item" href="#">IR자료실</a></li>
-                    <li><a class="dropdown-item" href="#">IR일정</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#">상품안내</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">통장/저축</a></li>
-                    <li><a class="dropdown-item" href="#">대출</a></li>
-                    <li><a class="dropdown-item" href="#">투자/외환</a></li>
-                    <li><a class="dropdown-item" href="#">카드</a></li>
-                    <li><a class="dropdown-item" href="#">사업자</a></li>
-                </ul>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link" href="#">고객센터</a>
-                <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">이용안내</a></li>
-                    <li><a class="dropdown-item" href="#">상담하기</a></li>
-                    <li><a class="dropdown-item" href="#">소비자보호</a></li>
-                    <li><a class="dropdown-item" href="#">금융사기대응</a></li>
-                    <li><a class="dropdown-item" href="#">약관/서식</a></li>
-                </ul>
-            </li>
+            <div class="collapse navbar-collapse" id="menu_list">
+                <ul class="navbar-nav ms-auto">
+                    <form class="nva_serch position-relative" role="search">
+                        <input id="searchInput" class="form-control w-auto nav-item" type="search" placeholder="검색어 입력">
+                        <!-- 검색 결과창,자바스크립트와 연동 -->
+                        <div id="searchResults" class="list-group position-absolute" style="z-index: 1000;"></div>
+                    </form>
 
-            <!-- 클릭 메뉴 (관련사이트), no_hover로 클릭시에만 작동하게 -->
-            <li class="nav-item dropdown no_hover">
-                <button class="btn btn-secondary dropdown-toggle btn_other_site" type="button" id="nav_btn_site_list" data-bs-toggle="dropdown">
-                    관련사이트
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="nav_btn_site_list">
-                    <li><a class="dropdown-item" href="#">사이트1</a></li>
-                    <li><a class="dropdown-item" href="#">사이트2</a></li>
-                    <li><a class="dropdown-item" href="#">사이트3</a></li>
-                    <li><a class="dropdown-item" href="#">사이트4</a></li>
-                    <li><a class="dropdown-item" href="#">사이트5</a></li>
-                    <li><a class="dropdown-item" href="#">사이트6</a></li>
-                </ul>
-            </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" d>은행소개</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">카카오뱅크</a></li>
+                            <li><a class="dropdown-item" href="#">윤리경영</a></li>
+                            <li><a class="dropdown-item" href="#">새소식</a></li>
+                            <li><a class="dropdown-item" href="#">인재영입</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">IR투자정보</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">공시정보</a></li>
+                            <li><a class="dropdown-item" href="#">경영정보</a></li>
+                            <li><a class="dropdown-item" href="#">재무정보</a></li>
+                            <li><a class="dropdown-item" href="#">IR자료실</a></li>
+                            <li><a class="dropdown-item" href="#">IR일정</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">상품안내</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">통장/저축</a></li>
+                            <li><a class="dropdown-item" href="#">대출</a></li>
+                            <li><a class="dropdown-item" href="#">투자/외환</a></li>
+                            <li><a class="dropdown-item" href="#">카드</a></li>
+                            <li><a class="dropdown-item" href="#">사업자</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#">고객센터</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">이용안내</a></li>
+                            <li><a class="dropdown-item" href="#">상담하기</a></li>
+                            <li><a class="dropdown-item" href="#">소비자보호</a></li>
+                            <li><a class="dropdown-item" href="#">금융사기대응</a></li>
+                            <li><a class="dropdown-item" href="#">약관/서식</a></li>
+                        </ul>
+                    </li>
 
-            <!-- 부트스트랩용 아이콘 링크 연동필수, 언어설정 지구본 아이콘 안나오는경우 확인 -->
-            <li class="nav-item dropdown">
-                <div class="dropdown">
-                <button class="btn" type="button" data-bs-toggle="dropdown">
-                    <i class="bi bi-globe" style="color: black; font-size:1.5rem"></i>
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end">
-                    <li><a class="dropdown-item" href="#" id="nav_language">한국어</a></li>
-                    <li><a class="dropdown-item" href="#" id="nav_language">English</a></li>
-                    <li><a class="dropdown-item" href="#" id="nav_language">日本語</a></li>
-                    <!-- 추후 자바스크립트까지 여유 되면 nav_language 사용해서 현재 언어설정 나오게? -->
-                </ul>
-                </div>
-            </li>
+                    <!-- 클릭 메뉴 (관련사이트), no_hover로 클릭시에만 작동하게 -->
+                    <li class="nav-item dropdown no_hover">
+                        <button class="btn btn-secondary dropdown-toggle btn_other_site" type="button" id="nav_btn_site_list" data-bs-toggle="dropdown">
+                            관련사이트
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="nav_btn_site_list">
+                            <li><a class="dropdown-item" href="#">사이트1</a></li>
+                            <li><a class="dropdown-item" href="#">사이트2</a></li>
+                            <li><a class="dropdown-item" href="#">사이트3</a></li>
+                            <li><a class="dropdown-item" href="#">사이트4</a></li>
+                            <li><a class="dropdown-item" href="#">사이트5</a></li>
+                            <li><a class="dropdown-item" href="#">사이트6</a></li>
+                        </ul>
+                    </li>
 
-        </ul>
-      </div>
-    </div>
-  </nav>
+                    <!-- 부트스트랩용 아이콘 링크 연동필수, 언어설정 지구본 아이콘 안나오는경우 확인 -->
+                    <li class="nav-item dropdown no_hover">
+                        <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown">
+                            <i class="bi bi-globe" style="color: black; font-size:1.5rem"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" href="#" id="nav_language">한국어</a></li>
+                            <li><a class="dropdown-item" href="#" id="nav_language">English</a></li>
+                            <li><a class="dropdown-item" href="#" id="nav_language">日本語</a></li>
+                            <!-- 추후 자바스크립트까지 여유 되면 nav_language 사용해서 현재 언어설정 나오게? -->
+                        </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
   <div class="nav_margin"></div>
 
     <main>
@@ -172,6 +176,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>

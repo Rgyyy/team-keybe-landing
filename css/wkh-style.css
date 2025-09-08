@@ -1,0 +1,212 @@
+
+/*카드 캐러셀 효과*/
+.perspective-1000 {
+      perspective: 1000px;
+    }
+.card-wrapper {
+      transform-style: preserve-3d;
+    }
+.card-image {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform-origin: center center;
+      transform: translate(-50%, -50%);
+    }
+/*캐러셀 끝*/
+
+/* checkcard */
+.intro_cont {
+    position: relative;
+    background-color: #fff;
+    color: #111
+}
+
+.intro_cont .cont_txt h3 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.35
+}
+
+.intro_cont .cont_txt p {
+    margin-top: 24px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #656565
+}
+
+.intro_cont .cont_btn {
+    position: absolute
+}
+
+.intro_cont .cont_btn .link_bank {
+    display: block;
+    background-color: #e3e3e3;
+    width: 258px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 56px;
+    color: #333;
+    border-radius: 10px;
+    text-align: center
+}
+
+.intro_cont .cont_btn .ico_arr {
+    display: inline-block;
+    width: 6px;
+    height: 9px;
+    margin: 5.5px 0 0 8px;
+    vertical-align: text-top
+}
+
+.intro_cont.cont_checkcard .cont_txt {
+    text-align: center;
+    padding-top: 150px
+}
+
+.intro_cont.cont_checkcard .cont_btn {
+    top: 337px;
+    left: 50%;
+    margin-left: -129px
+}
+
+.intro_cont .cont_btn {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 10%;
+}
+
+.intro_cont .cont_btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+/* checkcard */
+
+/* 하단 로고*/
+.intro_cont.cont_end {
+    background-color: #f9f9f9;
+    padding-bottom: 230px
+}
+
+.intro_cont.cont_end .cont_txt {
+    text-align: center;
+    padding-top: 160px
+}
+
+.intro_cont.cont_end .cont_bar {
+    display: block;
+    width: 100px;
+    height: 2px;
+    background-color: #000;
+    margin: 50px auto 140px
+}
+
+.intro_cont.cont_end .cont_img li {
+    float: left;
+    width: 25%;
+    height: 210px
+}
+
+.intro_cont.cont_end .cont_img li strong {
+    display: block;
+    margin: 45px 0 17px;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-align: center
+}
+
+.intro_cont.cont_end .cont_img li p {
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    color: #666;
+    font-weight: 200
+}
+/* 하단 로고 끝*/
+
+/* 5. 카드 호버 효과 추가 */
+.card {
+      display: rgb(158, 102, 102);
+      border: 1px solid #ad5050;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+.card {
+    transition: transform 0.3s;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+h2 {
+    color: rgb(12, 61, 207);  
+    font-weight: 700;  
+    position: relative;
+    display: inline-block;
+}
+
+.skill-grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr; /* 모바일: 1열 */
+    }
+
+    .skill-card {
+      background: rgb(229, 225, 225);
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .skill-card h3 {
+      margin-bottom: 60px;
+      font-size: 9.1rem;
+    }
+
+    .skill-bar {
+      background: #e0e0e0;
+      height: 15px;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .skill-progress {
+      background: #3796d5;
+      height: 100%;
+      transition: width 2s ease;
+    }
+/* 7. 스킬 효과및 호버 끝*/
+
+/* 1. 버튼 커스텀 스타일 */
+.btn {
+    padding: _12px 30px; 
+    font-size: 16px;  
+    border-radius: 25px;  /
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05); 
+}
+/* 반응형 */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .skill-grid {
+        grid-template-columns: repeat(4, 1fr); /* 대형 화면: 4열 */
+    }
+}
