@@ -1,0 +1,59 @@
+.nav_margin {
+    margin-top: 87px;
+}
+
+/* 네비게이션 바 하단 회색 선 추가 */
+.nav_css_line {
+  background-color: white !important;
+  border-bottom: 2px solid #dbdbdb;
+  padding-top:1rem;
+  padding-bottom:1rem;
+}
+
+/* 네이게이션 브랜드(kakakobank) 설정 */
+.navbar-brand {
+    font-size: 1.8rem;
+    padding-left: 1rem;
+}
+.navbar-brand .bold-part {
+    font-weight: bold;
+    color:black;
+}
+
+/* 네비게이션 아이템들 간격 설정 */
+.navbar-nav .nav-item {
+    margin-left: 1.5rem;
+}
+.navbar-nav .nav-item:last-child {
+    margin-right: 2rem;
+}
+.navbar-nav .nav-item .nav-link {
+    font-weight: bold;
+}
+
+/* 네비게이션에 관련 사이트 버튼은 호버대신 클릭만으로 작동하게 */
+.dropdown:hover:not(.no_hover) .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+.hover-dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.btn-secondary.btn_other_site{
+  background-color: #dbdbdb;
+  color:black;
+  border:0;
+}
+
+.navbar .navbar-nav {
+    display: flex;          /* Flexbox 적용 */
+    align-items: center;    /* 세로 중앙 정렬 */
+}
+@media (max-width: 768px) {
+    .navbar .navbar-nav {
+        display: block;
+        align-items: unset;
+    }
+}

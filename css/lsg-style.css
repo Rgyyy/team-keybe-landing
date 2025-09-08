@@ -1,0 +1,65 @@
+/* 모두의 기본 설정 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 1. 전체 적용 된 부분 모바일 부터 작업함 
+   2. 테스트 한 기종은 삼성 갤럭시 s20 울트라임
+   3. 글씨색 검정으로 적용
+*/
+body {
+    color: #0f0f0f;
+}
+
+/* 글씨 가운데 */
+.lsg-hero h1, h2, p {
+    text-align: center;    
+    line-height: 1px;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+
+/* 전체 반응형 버튼 꾸밈 */
+.lsg-hero button {
+    padding: 1rem 2rem; /* 24px */
+    margin: 2rem; /* 16px */
+    border-radius: 15rem; /* 240px */ 
+    border: none;
+    cursor: pointer;
+}
+
+/* 개별 적용된 부분 */
+
+/* 맨 처음 섹션만 배경 노란색 적용*/
+.hero-yellow {
+    background-color: #ffff32;
+}
+
+/* 회색 배경용 */
+.hero-gray {
+    background-color: #dbdbdb;
+}
+
+/* 흰색 배경용 */
+.hero-white {
+    background-color: #ffffff;
+}
+
+/* 가운데에 버튼 오게 위치 조절용 */
+.button-4rem {
+    margin-left: 4rem; /* 64px */
+}
+
+.button-6rem {
+    margin-left: 6rem; /* 96px */
+}
+
+.button-right {
+    margin-left: 12rem; /* 192px */
+    margin-top: -7.5rem; /* 120px */
+}
+
