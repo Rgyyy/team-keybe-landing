@@ -10,11 +10,12 @@
 }
 footer {
     padding: 20px;
-    font-size: 0.8rem;
+    font-size: 0.53rem;
 }
 .info_busi, .info_copyright, .footer_bottom {
     margin-top: 10px;
 }
+/*미디어쿼리 사용으로 가로 픽셀 768 이상이면 아래 내용 적용 */
 @media (min-width: 768px) {
     footer{
         background-color: #e7e7e7;
