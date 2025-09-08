@@ -32,6 +32,10 @@ body {
     cursor: pointer;
 }
 
+.mobile-none {
+    display: none;
+}
+
 /* 개별 적용된 부분 */
 
 /* 맨 처음 섹션만 배경 노란색 적용*/
@@ -61,5 +65,61 @@ body {
 .button-right {
     margin-left: 12rem; /* 192px */
     margin-top: -7.5rem; /* 120px */
+}
+
+/* 데스크탑 모드 */
+@media (min-width: 1024px) {
+    /* 전체 적용 왼쪽 배치 */
+    .lsg-hero h1, h2, p {
+        display: flex;
+        padding-left: 15rem; /* 240px */
+        line-height: 1rem; /* 1rem */
+    }
+
+    .mobile-none {
+        display: block;
+        margin-left: 60rem; /* 960px */
+        margin-top: -31rem; /* - 496px */
+        padding-bottom: 1rem;
+    }
+
+    /* 개별 적용 */
+
+    /* 버튼 하나 짜리 왼쪽 이동 */
+    .button-desktop-left {
+        margin-left: 9rem; /* 144px */
+    }
+
+    /* 세부 조정용 */
+    .button-7rem {
+        margin-left: 7rem; /* 128px */
+    }
+
+    /* 버튼 두개 짜리 왼쪽 이동 */
+    .button-13rem {
+        margin-left: 13rem; /* 208px */
+    }
+
+    .left-25rem {
+        margin-left: -25rem; /* -400px */
+    }
+
+    .desktop-top{
+        margin-top: 8rem; /* 128px */
+    }
+
+    .desktop-top-{
+        margin-top: -8rem; /* -128px */
+    }
+
+    .desktop-bottom {
+        margin-bottom: 9rem;
+    }
+    /* 텍스트 중앙정렬 */
+    .center h1 {
+        justify-content: center; 
+    }
+
+  
 }
 
