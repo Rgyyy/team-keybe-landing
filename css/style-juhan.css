@@ -1,31 +1,56 @@
-.info_copyright > span {
+.info_copyright>span {
     color: rgb(145, 145, 145)
 }
 
-.footer_bottom img, span {
+.footer_bottom img,
+span {
     color: rgb(145, 145, 145)
 }
-.web_trust_seal {
+
+.web_trust_seal,
+.WA,
+.facebook {
     height: 20px
 }
+
+.facebook {
+    margin-right: 10px;
+}
+
 footer {
     padding: 20px;
     font-size: 0.53rem;
 }
-.info_busi, .info_copyright, .footer_bottom {
+
+.info_busi,
+.info_copyright,
+.footer_bottom {
     margin-top: 10px;
 }
+
+.hideOnPhone {
+    display: none;
+}
+
 /*미디어쿼리 사용으로 가로 픽셀 768 이상이면 아래 내용 적용 */
 @media (min-width: 768px) {
-    footer{
+    footer {
         background-color: #e7e7e7;
         ;
         font-size: 1rem;
     }
+
     br.over768 {
         display: none;
     }
-    
-    
-    
+
+    .hideOnPhone {
+    display: inline;
+    }
+
+    .web_trust_seal,
+    .WA {
+        height: 40px;
+    }
+
 }
