@@ -6,6 +6,11 @@
     box-sizing: border-box;
 }
 
+.lsg-hero button{
+    background-color: #dbdbdb;
+}
+
+
 /* 1. 전체 적용 된 부분 모바일 부터 작업함 
    2. 테스트 한 기종은 삼성 갤럭시 s20 울트라임
    3. 글씨색 검정으로 적용
@@ -30,7 +35,6 @@ body {
     border-radius: 15rem; /* 240px */ 
     border: none;
     cursor: pointer;
-    margin-left: 13rem; /* 버튼 위치 가운데 조정 */
 }
 
 .mobile-none {
@@ -67,8 +71,6 @@ body {
     margin-left: 12rem; /* 192px */
     margin-top: -7.5rem; /* 120px */
 }
-
-
 
 /* 데스크탑 모드 */
 @media (min-width: 1024px) {
