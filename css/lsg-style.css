@@ -20,7 +20,7 @@ body {
 }
 
 /* 글씨 가운데 */
-.lsg-hero h1, h2, p {
+.lsg-hero h1, h2, h4 {
     text-align: center;    
     line-height: 1px;
     padding: 1rem;
@@ -75,7 +75,7 @@ body {
 /* 데스크탑 모드 */
 @media (min-width: 1024px) {
     /* 전체 적용 왼쪽 배치 */
-    .lsg-hero h1, h2, p {
+    .lsg-hero h1, h2, h4 {
         display: flex;
         padding-left: 15rem; /* 240px */
         line-height: 1rem; /* 1rem */
