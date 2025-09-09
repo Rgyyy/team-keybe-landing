@@ -115,6 +115,7 @@ body {
     .desktop-bottom {
         margin-bottom: 9rem;
     }
+
     /* 텍스트 중앙정렬 */
     .center h1 {
         justify-content: center; 
