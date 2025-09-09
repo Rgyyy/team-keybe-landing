@@ -77,3 +77,9 @@ searchInput.addEventListener("input", function() {
     }
 });
 
+const menuBtn = document.getElementById('menu_button');
+const menuList = document.getElementById('menu_list');
+
+menuBtn.addEventListener('click', () => {
+  menuList.classList.toggle('show');
+});

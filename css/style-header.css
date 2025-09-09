@@ -9,7 +9,6 @@
   padding-top:1rem;
   padding-bottom:1rem;
 }
-
 /* 네이게이션 브랜드(kakakobank) 설정 */
 .navbar-brand {
     font-size: 1.8rem;
@@ -19,7 +18,6 @@
     font-weight: bold;
     color:black;
 }
-
 /* 네비게이션 아이템들 간격 설정 */
 .navbar-nav .nav-item {
     margin-left: 1.5rem;
@@ -47,13 +45,30 @@
   border:0;
 }
 
-.navbar .navbar-nav {
-    display: flex;          /* Flexbox 적용 */
-    align-items: center;    /* 세로 중앙 정렬 */
-}
-@media (max-width: 768px) {
+/* .navbar .navbar-nav {
+    display: flex;
+    align-items: center;
+} */
+/* @media (max-width: 768px) {
     .navbar .navbar-nav {
         display: block;
         align-items: unset;
     }
+} */
+
+#menu_list {
+  display: none;
+  /* flex-direction: column; */
+}
+#menu_list.show {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  #menu_list {
+    display: flex !important;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 }

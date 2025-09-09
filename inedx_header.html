@@ -1,182 +1,355 @@
 <!DOCTYPE html>
 <html lang="ko">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>카카오뱅크 copy</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-    <!-- 부트스트랩용 아이콘 추가 -->
-    <link rel="stylesheet" href="css/style-header.css">
-    <link rel="stylesheet" href="css/style-juhan.css">
-</head>
-<!-- 중단에 있던 중복되는 링크js중복 제거 -->
- 
-<body>
-    <!-- 헤더 -->
-    <nav class="navbar navbar-expand-md bg-secondary nav_css_line fixed-top">
-    <!-- 반응형 md사이즈로 기준 -->
-    <!-- (임시)네비게이션바 연회색 bg-secondary, 추후 바디와 식별 가능하면 흰색으로 조정 //css 강제 적용 했음-->
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                kakao<span class="bold-part">bank</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_list">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <!-- 부트스트랩 navbar-toggler 햄버거버튼 사용 -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>카카오뱅크 copy</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+        <!-- 부트스트랩용 아이콘 추가 -->
+        <link rel="stylesheet" href="css/style-header.css">
+        <link rel="stylesheet" href="css/wkh-style.css">
+        <link rel="stylesheet" href="css/style-juhan.css">
 
-            <div class="collapse navbar-collapse" id="menu_list">
-                <ul class="navbar-nav ms-auto">
-                    <form class="nva_serch position-relative" role="search">
-                        <input id="searchInput" class="form-control w-auto nav-item" type="search" placeholder="검색어 입력">
-                        <!-- 검색 결과창,자바스크립트와 연동 -->
-                        <div id="searchResults" class="list-group position-absolute" style="z-index: 1000;"></div>
-                    </form>
+        
+    </head>
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" d>은행소개</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">카카오뱅크</a></li>
-                            <li><a class="dropdown-item" href="#">윤리경영</a></li>
-                            <li><a class="dropdown-item" href="#">새소식</a></li>
-                            <li><a class="dropdown-item" href="#">인재영입</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">IR투자정보</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">공시정보</a></li>
-                            <li><a class="dropdown-item" href="#">경영정보</a></li>
-                            <li><a class="dropdown-item" href="#">재무정보</a></li>
-                            <li><a class="dropdown-item" href="#">IR자료실</a></li>
-                            <li><a class="dropdown-item" href="#">IR일정</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">상품안내</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">통장/저축</a></li>
-                            <li><a class="dropdown-item" href="#">대출</a></li>
-                            <li><a class="dropdown-item" href="#">투자/외환</a></li>
-                            <li><a class="dropdown-item" href="#">카드</a></li>
-                            <li><a class="dropdown-item" href="#">사업자</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#">고객센터</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">이용안내</a></li>
-                            <li><a class="dropdown-item" href="#">상담하기</a></li>
-                            <li><a class="dropdown-item" href="#">소비자보호</a></li>
-                            <li><a class="dropdown-item" href="#">금융사기대응</a></li>
-                            <li><a class="dropdown-item" href="#">약관/서식</a></li>
-                        </ul>
-                    </li>
+    <body>
+        <!-- 헤더 -->
+        <nav class="navbar navbar-expand-md nav_css_line fixed-top">
+            <!-- 반응형 md사이즈로 기준 -->
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">
+                        keybe<span class="bold-part">bank</span>
+                    </a>
+                    <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_list"> -->
+                    <button class="navbar-toggler" id="menu_button" type="button">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-                    <!-- 클릭 메뉴 (관련사이트), no_hover로 클릭시에만 작동하게 -->
-                    <li class="nav-item dropdown no_hover">
-                        <button class="btn btn-secondary dropdown-toggle btn_other_site" type="button" id="nav_btn_site_list" data-bs-toggle="dropdown">
-                            관련사이트
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="nav_btn_site_list">
-                            <li><a class="dropdown-item" href="#">사이트1</a></li>
-                            <li><a class="dropdown-item" href="#">사이트2</a></li>
-                            <li><a class="dropdown-item" href="#">사이트3</a></li>
-                            <li><a class="dropdown-item" href="#">사이트4</a></li>
-                            <li><a class="dropdown-item" href="#">사이트5</a></li>
-                            <li><a class="dropdown-item" href="#">사이트6</a></li>
-                        </ul>
-                    </li>
+                    <!-- <div class="collapse navbar-collapse" id="menu_list"> -->
+                    <div class="navbar-collapse" id="menu_list">
+                        <!-- 테일윈드와 충돌, 부트스트랩 collapse포기, 모바일 화면 전환시 시작하면 펼쳐진상태로, 최초 1회만 구현 가능해보임 -->
+                        <ul class="navbar-nav ms-auto">
+                            <form class="nva_serch position-relative" role="search">
+                                <input id="searchInput" class="form-control w-auto nav-item" type="search" placeholder="검색어 입력">
+                                <!-- 검색 결과창,자바스크립트와 연동 -->
+                                <div id="searchResults" class="list-group position-absolute" style="z-index: 1000;"></div>
+                            </form>
 
-                    <!-- 부트스트랩용 아이콘 링크 연동필수, 언어설정 지구본 아이콘 안나오는경우 확인 -->
-                    <li class="nav-item dropdown no_hover">
-                        <div class="dropdown">
-                        <button class="btn" type="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-globe" style="color: black; font-size:1.5rem"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            <li><a class="dropdown-item" href="#" id="nav_language">한국어</a></li>
-                            <li><a class="dropdown-item" href="#" id="nav_language">English</a></li>
-                            <li><a class="dropdown-item" href="#" id="nav_language">日本語</a></li>
-                            <!-- 추후 자바스크립트까지 여유 되면 nav_language 사용해서 현재 언어설정 나오게? -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">은행소개</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">카카오뱅크</a></li>
+                                    <li><a class="dropdown-item" href="#">윤리경영</a></li>
+                                    <li><a class="dropdown-item" href="#">새소식</a></li>
+                                    <li><a class="dropdown-item" href="#">인재영입</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">IR투자정보</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">공시정보</a></li>
+                                    <li><a class="dropdown-item" href="#">경영정보</a></li>
+                                    <li><a class="dropdown-item" href="#">재무정보</a></li>
+                                    <li><a class="dropdown-item" href="#">IR자료실</a></li>
+                                    <li><a class="dropdown-item" href="#">IR일정</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">상품안내</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">통장/저축</a></li>
+                                    <li><a class="dropdown-item" href="#">대출</a></li>
+                                    <li><a class="dropdown-item" href="#">투자/외환</a></li>
+                                    <li><a class="dropdown-item" href="#">카드</a></li>
+                                    <li><a class="dropdown-item" href="#">사업자</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#">고객센터</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">이용안내</a></li>
+                                    <li><a class="dropdown-item" href="#">상담하기</a></li>
+                                    <li><a class="dropdown-item" href="#">소비자보호</a></li>
+                                    <li><a class="dropdown-item" href="#">금융사기대응</a></li>
+                                    <li><a class="dropdown-item" href="#">약관/서식</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- 클릭 메뉴 (관련사이트), no_hover로 클릭시에만 작동하게 -->
+                            <li class="nav-item dropdown no_hover">
+                                <button class="btn btn-secondary dropdown-toggle btn_other_site" type="button" id="nav_btn_site_list" data-bs-toggle="dropdown">
+                                    관련사이트
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="nav_btn_site_list">
+                                    <li><a class="dropdown-item" href="#">사이트1</a></li>
+                                    <li><a class="dropdown-item" href="#">사이트2</a></li>
+                                    <li><a class="dropdown-item" href="#">사이트3</a></li>
+                                    <li><a class="dropdown-item" href="#">사이트4</a></li>
+                                    <li><a class="dropdown-item" href="#">사이트5</a></li>
+                                    <li><a class="dropdown-item" href="#">사이트6</a></li>
+                                </ul>
+                            </li>
+
+                            <!-- 부트스트랩용 아이콘 링크 연동필수, 언어설정 지구본 아이콘 안나오는경우 확인 -->
+                            <li class="nav-item dropdown no_hover">
+                                <div class="dropdown">
+                                <button class="btn" type="button" data-bs-toggle="dropdown">
+                                    <i class="bi bi-globe" style="color: black; font-size:1.5rem"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li><a class="dropdown-item" href="#" id="nav_language">한국어</a></li>
+                                    <li><a class="dropdown-item" href="#" id="nav_language">English</a></li>
+                                    <li><a class="dropdown-item" href="#" id="nav_language">日本語</a></li>
+                                    <!-- 추후 자바스크립트까지 여유 되면 nav_language 사용해서 현재 언어설정 나오게? -->
+                                </ul>
+                                </div>
+                            </li>
+
                         </ul>
+                    </div>
+                </div>
+            </nav>
+        <div class="nav_margin"></div>
+
+
+        <main>
+            
+            <div class="lsg-hero">
+
+                <section class="checkcard">
+            
+                    <div class="intro_cont cont_checkcard">
+                        <div class="cont_btn">
                         </div>
-                    </li>
+                    <div class="cont_txt">
+                        <h3>키비 체크카드,<br>내가 고르는 선택의 즐거움</h3>
+                        <p>프렌즈 디자인부터 멋스러운 블랙 컬러 카드까지 원하는 디자인과 기능을 선택할 수 있습니다.</p>
+                    </div>
+                    <div class="cont_btn">
+                        <a class="link_bank" href="/products/checkcard" target="_self">
+                            "키비뱅크 프렌즈 체크카드"
+                            <img alt="열기" class="ico_arr" src="images/home_arr.png"></a>
+                    </div>
+                </section>
+            </div>   
 
-                </ul>
+            <section class="cardCarousel">
+                <div class="bg-gray-50 flex flex-col items-center justify-center min-h-screen">
+                    <div class="relative w-full max-w-4xl mx-auto">
+                        <div id="cardCarousel" class="relative w-full h-[400px] flex items-center justify-center perspective-1000">
+                            <div class="card-container relative w-full h-full flex items-center justify-center">
+                                <div class="card-wrapper relative w-full h-full flex items-center justify-center transition-transform duration-500 ease-in-out">
+                                    <img src="images/card-1.png" class="card-image w-64 rounded-xl shadow-xl transition-all duration-500" alt="체크카드 1">
+                                    <img src="images/card-2.png" class="card-image w-64 rounded-xl shadow-xl transition-all duration-500" alt="체크카드 2">
+                                    <img src="images/card-3.png" class="card-image w-64 rounded-xl shadow-xl transition-all duration-500" alt="체크카드 3">
+                                    <img src="images/card-4.png" class="card-image w-64 rounded-xl shadow-xl transition-all duration-500" alt="체크카드 4">
+                                    <img src="images/card-5.png" class="card-image w-64 rounded-xl shadow-xl transition-all duration-500" alt="체크카드 5">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-center mt-12 space-x-4 relative z-50">
+                        <button id="prevBtn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">이전</button>
+                        <button id="nextBtn" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">다음</button>
+                    </div>                
+                </div>
+            </section>
+
+            <section id="card" class="card-skill">
+                <div class="container">
+                    <h2 style="font-size: 25px;">목표!!!&nbsp;&nbsp;1억 달성 이벤트&nbsp;&nbsp;집계 순위</h2>
+                    <br>
+                    <br>
+                    <div class="skill-grid">
+                        <div class="card">
+                            <h3 class="flex justify-between">
+                            <span><strong>한규현 고객님</strong></span>
+                            <span>9000만원</span>
+                            </h3>
+                            <br>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="flex justify-between">
+                            <span><strong>이주한 고객님</strong></span>
+                            <span>8200만원</span>
+                            </h3>
+                            <br>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="flex justify-between">
+                            <span><strong>이성구 고객님</strong></span>
+                            <span>7800만원</span>
+                            </h3>
+                            <br>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="flex justify-between">
+                            <span><strong>우경호 고객님</strong></span>
+                            <span>7300만원</span>
+                            </h3>
+                            <br>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 73%"></div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="flex justify-between">
+                            <span><strong>이민석 고객님</strong></span>
+                            <span>4000만원</span>
+                            </h3>
+                            <br>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 40%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="intro_cont cont_end">
+                    <div class="cont_txt">
+                        <h3>IT 기술로 키비뱅크를<br>만들어 갑니다.</h3>
+                    </div>
+                    <span class="cont_bar"></span>
+                    <span class="cont_bar_bg"></span>
+                    <div class="cont_img">
+                        <img alt src="images/home_it.png">   
+                        <ul>
+                            <li>
+                                <strong>간결하고, 유려하게</strong>
+                                <p>
+                                    작은 모바일 화면에 적합하도록<br>
+                                    복잡함을 덜어낸<br>
+                                    유려하고 친화적인 UX
+                                </p>
+                            </li>
+                            <li>
+                                <strong>간편한 인증, 철저한 보안</strong>
+                                <p>
+                                    지문, 비밀번호로 간편한 인증<br>
+                                    IT 기술의 강력한 보안 검증과<br>
+                                    데이터 암호화
+                                </p>
+                            </li>
+                            <li></li>
+
+                            <li>
+                                <strong>Mobile First, One App</strong>
+                                <p>
+                                    모바일에서 뱅킹이 더 쉽고 편리하게<br>
+                                    여러 앱을 설치할 필요 없이<br>
+                                    하나의 앱으로
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <section class="footer_info">
+                <a href=# class="text-muted link-underline link-underline-opacity-0">모바일뱅킹 서비스 이용약관</a> <span>
+                    &nbsp;|&nbsp;</span>
+                <a href=# class="text-muted link-underline link-underline-opacity-0">전자금융거래약관</a> <span>
+                    &nbsp;|&nbsp;</span>
+                <a href=# class="fw-bold text-dark link-underline link-underline-opacity-0">위치기반 서비스 이용약관</a> <span>
+                    &nbsp;|&nbsp;</span>
+                <br class="over768">
+                <a href=# class="text-muted link-underline link-underline-opacity-0">키비뱅크 인증서 서비스 이용약관</a> <span>
+                    &nbsp;|&nbsp;</span>
+                <a href=# class="fw-bold text-dark link-underline link-underline-opacity-0">개인정보처리방침</a> <span>
+                    &nbsp;|&nbsp;</span>
+                <a href=# class="text-muted link-underline link-underline-opacity-0">신용정보활용체제</a> <span>
+                    &nbsp;|&nbsp;</span>
+                <br class="over768">
+                <a href=# class="text-muted link-underline link-underline-opacity-0">전자서명인증업무준칙</a>
+            </section>
+            <section class="info_busi">
+                <div class="text-muted">(주)키비뱅크·키비·사업자번호 000-11-00133</div>
+            </section>
+            <section class="info_copyright">
+                <span>Copyright © KeybeBank Corp.</span>
+            </section>
+            <section class="footer_bottom">
+
+                <div class="position-relative" id="footer_images">
+                    <a href="#" class="link-underline link-underline-opacity-0 hideOnPhone">
+                        <img class="WA" src="./images/WA.svg" alt="웹 와치">
+                        <span>웹 접근성 품질인증&nbsp;&nbsp;&nbsp;</span>
+                    </a>
+                    <a href="#" class="link-underline link-underline-opacity-0">
+                        <img class="web_trust_seal" src="./images/web_trust_seal.png" alt="웹 트러스터 국제공용평가 인증">
+                        <span>웹 트러스트 인증</span>
+                    </a>
+                    <a href="#" class="link-underline link-underline-opacity-0 hideOnPhone float-end">
+                        <img class="facebook" src="./images/facebook.png" alt="facebook1">
+                    </a>
+                    <a href="#" class="link-underline link-underline-opacity-0 hideOnPhone float-end">
+                        <img class="facebook" src="./images/facebook.png" alt="facebook2">
+                    </a>
+                    <a href="#" class="link-underline link-underline-opacity-0 hideOnPhone float-end">
+                        <img class="facebook" src="./images/facebook.png" alt="facebook3">
+                    </a>
+                    <a href="#" class="link-underline link-underline-opacity-0 hideOnPhone float-end">
+                        <img class="facebook" src="./images/facebook.png" alt="facebook4">
+                    </a>
+                </div>
+
+
+            </section>
+        </footer>
+
+        <!-- 플로팅 버튼 -->
+        <button class="floating-btn" id="floatingBtn" onclick="openModal()">
+        💲
+        </button>
+
+        <!-- 모달 오버레이 -->
+        <div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+        <!-- 환율 모달 -->
+        <div class="exchange-modal" id="exchangeModal">
+            <div class="modal-header">
+                <h2>💲 실시간 환율</h2>
+                <button class="close-btn" onclick="closeModal()">×</button>
             </div>
-        </div>
-    </nav>
-  <div class="nav_margin"></div>
 
-    <main>
-        <section class="hero">
+            <div class="modal-body">
+                <div class="api-setup" id="apiSetup">
+                    <input 
+                    type="text" 
+                    id="apiKey" 
+                    placeholder="한국수출입은행 API 키를 입력하세요"
+                    onkeypress="handleKeyPress(event)"
+                    >
+                    <button onclick="fetchExchangeRate()" id="fetchBtn">
+                    환율 조회
+                    </button>
+                </div>
+                <div id="exchangeData"></div>
+            </div>
+        </div>  
 
-        </section>
-
-        <section class="hero">
-
-        </section>
-
-        <section class="hero">
-
-        </section>
-
-        <section class="hero">
-
-        </section>
-
-        <section class="hero">
-
-        </section>
-
-        <section class="hero">
-
-        </section>
-
-        <section class="hero">
-
-        </section>
-
-        <section class="hero">
-
-        </section>
-
-        <section class="hero">
-
-        </section>
-    </main>
-
-    <footer>
-        <section class="footer_info">
-            <a href=# class="text-muted link-underline link-underline-opacity-0">모바일뱅킹 서비스 이용약관</a> <span> &nbsp;|&nbsp;</span>
-            <a href=# class="text-muted link-underline link-underline-opacity-0">전자금융거래약관</a> <span> &nbsp;|&nbsp;</span> 
-            <a href=# class="fw-bold text-dark link-underline link-underline-opacity-0">위치기반 서비스 이용약관</a> <span> &nbsp;|&nbsp;</span> 
-            <br class="over768">
-            <a href=# class="text-muted link-underline link-underline-opacity-0">카카오뱅크 인증서 서비스 이용약관</a> <span> &nbsp;|&nbsp;</span> 
-            <a href=# class="fw-bold text-dark link-underline link-underline-opacity-0">개인정보처리방침</a> <span> &nbsp;|&nbsp;</span> 
-            <a href=# class="text-muted link-underline link-underline-opacity-0">신용정보활용체제</a> <span> &nbsp;|&nbsp;</span> 
-            <br class="over768">
-            <a href=# class="text-muted link-underline link-underline-opacity-0">전자서명인증업무준칙</a>           
-        </section>
-        <section class="info_busi">
-            <div class="text-muted">(주)따따오뱅크·이이이·사업자번호 000-11-00133</div>
-        </section>
-        <section class="info_copyright">
-            <span>Copyright © KakaoBank Corp.</span>
-        </section>
-        <section class="footer_bottom">
-            <a href="#" class="link-underline link-underline-opacity-0">
-            <img class="web_trust_seal" src="./images/web_trust_seal.png" alt="웹 트러스터 국제공용평가 인증">
-            <span>웹 트러스트 인증</span>
-            </a>
-        </section>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/header.js"></script>
-</body>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="js/main.js"></script>
+        <script src="js/header.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.2/dist/gsap.min.js"></script>
+        <script src="js/main-juhan.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
 
 </html>
